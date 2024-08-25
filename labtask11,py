@@ -1,0 +1,18 @@
+sub1 = int(input("Enter marks for Subject 1: "))
+sub2 = int(input("Enter marks for Subject 2: "))
+sub3 = int(input("Enter marks for Subject 3: "))
+
+marks = {
+    "Subject 1": sub1,
+    "Subject 2": sub2,
+    "Subject 3": sub3
+}
+
+total = marks["Subject 1"] + marks["Subject 2"] + marks["Subject 3"]
+
+average_marks = total / 3
+max_marks = 300
+percentage = (total / max_marks) * 100
+print("Marks Dictionary:", marks)
+print("Average Marks:", average_marks)
+print("Percentage:", percentage, "%")
