@@ -1,5 +1,5 @@
 list1  = input("Enter list : ")
-list2 = [int(x) for x in list1.split()]#make this step easier please
+list2 = [int(x) for x in list1.split()]
 
 
 print(list2)
