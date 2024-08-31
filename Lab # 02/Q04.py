@@ -9,8 +9,7 @@ def employee(name, sal=None):
     return
 
 name = input("Employee name: ")
-salary = input("Salary (leave blank for default): ")
-
+salary = input("Salary : ")
 
 if salary != " ":
     sal = float(salary)
