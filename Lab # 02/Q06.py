@@ -1,17 +1,12 @@
-list1  = input("Enter list : ")
-list2 = [int(x) for x in list1.split()]
+user = input("Enter a list :  ")
+list1 = [int(x) for x in user.split()]
 
-
-print(list2)
 
 mul = 1
+i=[0]
 
-for i in range(0 , len(list2)):
+for i in list1:
     mul = mul * i
-
-print("product of all elements in the list is : " , mul)
-
+    i = i+1
     
-    
-    
-    
+print("the product of all the elements in the list is : ",mul)
