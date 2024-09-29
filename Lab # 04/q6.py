@@ -23,9 +23,8 @@ class BankAccount:
             print("Withdrawal amount must be greater than zero.")
 
     def check_balance(self):
-        """Returns the current balance of the account."""
+        
         print(f"Account balance: ${self.balance:.2f}")
-
 
 
 
