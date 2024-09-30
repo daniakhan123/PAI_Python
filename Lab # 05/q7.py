@@ -1,30 +1,15 @@
-def replace_letter():
+import re
+
+def extract_emails(text):
+    email_pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
     
-    with open("replacement_needed.txt", "r") as file:
-        data = file.read()
-
-        print("Before replacement:")
-        print(data)
-
-    o_letter = input("Enter letter you want to replace: ")
-    r_letter = input("Enter letter you want to replace with: ")
-
-    try:
-        new_data = data.replace(o_letter, r_letter)
+    emails = re.findall(email_pattern, text)
     
-        with open("replacement_needed.txt", "w") as file:
-            file.write(new_data)
-    
-        print("After replacement:")
-        print(new_data)
-    
-    except FileNotFoundError:
-        print("Error The file was not found")
-    except IOError:
-        print("Error while opening the file")
-    except Exception as e:
-        print("An unexpected error occurred ")
+    return emails
 
+text = '''Hello, please contact us at DaniaKhan@example.com for more information.
+You can also reach out to @FatehTextile.com or Zoni.Amjad@gmail.com.
+'''
 
-replace_letter()
-
+emails = extract_emails(text)
+print("Extracted email addresses:", emails)
