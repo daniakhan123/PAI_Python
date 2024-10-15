@@ -1,0 +1,18 @@
+import numpy as np
+
+arr = np.arange(2 , 20 , 2)
+arr = arr.reshape(3 , 3)
+print(arr)
+print()
+
+
+mul = arr*4
+print(mul)
+print()
+
+mat = np.eye(3 ,3)
+print(mat)
+print()
+
+res = mul * mat
+print(res)
